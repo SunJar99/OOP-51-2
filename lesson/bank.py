@@ -4,8 +4,9 @@ class BankAccount:
         self._balance = balance # Safe
         self.__password = password # Private
     
-    def __top_up_balance(self._balance, amount):
-        
+    def __top_up_balance(self, _balance, amount):
+        self._balance += amount
+    
     def about(self):
         print(f"PS: {self.__password}")
 

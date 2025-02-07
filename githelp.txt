@@ -33,3 +33,7 @@ mkdir name_dir | Команда для создания директории с 
 touch name_file | Команда для создания файла с названием name_file
 rm name_file | Команда для удаления файла с названием name_file
 clear | Команда для очистки терминала
+
+
+.venv\Scripts\activate
+

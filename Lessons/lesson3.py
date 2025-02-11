@@ -1,3 +1,12 @@
+# The @abstractmethod decorator in Python is used to declare abstract methods in an abstract base class (ABC).
+# An abstract method is a method that is declared in a base class but does not have any implementation.
+# Subclasses of the abstract base class are required to provide their own implementation of the abstract method.
+
+# A class containing one or more abstract methods cannot be instantiated directly.
+# Subclasses that inherit from the abstract base class must implement all abstract methods in order to be instantiated.
+# Abstract methods are often used when you want to define a common interface for all subclasses,
+# but leave the specific implementation details to the subclasses.
+
 from abc import ABC, abstractmethod
 # Abstract basic class
 

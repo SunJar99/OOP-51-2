@@ -79,22 +79,22 @@ connect.commit()
 
 # CRUD - Create - Read - Update - Delete
 
-# Create
-def add_user(name, age, hobby):
+# # Create
+# def add_user(name, age, hobby):
     
-    cursor.execute(
-        'INSERT INTO users(name, age, hobby) VALUES (?,?,?)',
-        (name, age, hobby)
-    )
+#     cursor.execute(
+#         'INSERT INTO users(name, age, hobby) VALUES (?,?,?)',
+#         (name, age, hobby)
+#     )
 
-    connect.commit()
-    print(f"Пользователь {name} добавлен")
+#     connect.commit()
+#     print(f"Пользователь {name} добавлен")
 
-name = input("Name: ")
-age = input("Age: ")
-hobby = input("Hobby: ")
+# name = input("Name: ")
+# age = input("Age: ")
+# hobby = input("Hobby: ")
     
-add_user(name, age, hobby)
+# add_user(name, age, hobby)
 # add_user("John", 33, "Swimming")
 # add_user("Ardager", 25, "Sleeping")
 # add_user("Zhandar", 17, "Winning")
@@ -111,3 +111,30 @@ def get_all_users():
         
 
 get_all_users()
+
+def update_user(new_name, row_id):
+    
+    cursor.execute(
+        'UPDATE users SET name = ? WHERE rowid = ?',
+        (new_name, row_id)
+    )
+    
+    connect.commit()
+    print('User updated')
+    
+update_user(row_id=3, new_name="Ebai")
+
+
+# DELETE
+
+# def delete_user(row_id):
+#     cursor.execute(
+#         'DELETE from users WHERE rowid = ?',
+#         (row_id)
+#     )
+#     connect.commit()
+#     print('Deleted')
+    
+# delete_user(2)
+
+ 

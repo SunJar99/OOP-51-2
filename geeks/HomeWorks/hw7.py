@@ -1,1 +1,0 @@
-# The 7th homework is in the lesson7.py just as you asked!!!!
